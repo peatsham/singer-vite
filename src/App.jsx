@@ -13,7 +13,7 @@ export default function App() {
   },
   {
     title: "crisp",
-    src: "/audio/crisp.m4a",
+    src: "/audio/crisploop.mp3",
     image: flyAgaricImg,
   },
   {
