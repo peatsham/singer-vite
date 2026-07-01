@@ -6,22 +6,22 @@ import webImg from "./assets/web.jpg";
 
 export default function App() {
   const tracks = [
-  {
-    title: "slowcoach",
-    src: "/audio/slowcoach.m4a",
-    image: driftImg,
-  },
-  {
-    title: "crisp",
-    src: "/audio/crisploop.mp3",
-    image: flyAgaricImg,
-  },
-  {
-    title: "oink",
-    src: "/audio/oink.m4a",
-    image: webImg,
-  },
-];
+    {
+      title: "slowcoach",
+      src: "/audio/slowcoach.m4a",
+      image: driftImg,
+    },
+    {
+      title: "crisp",
+      src: "/audio/crisp.m4a",
+      image: flyAgaricImg,
+    },
+    {
+      title: "oink",
+      src: "/audio/oink.m4a",
+      image: webImg,
+    },
+  ];
 
   const [activeIndex, setActiveIndex] = useState(null);
 

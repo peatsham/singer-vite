@@ -25,32 +25,26 @@ export default function MusicBanner({
 
   return (
     <div className={styles.banner}>
-      <img
-  className={styles.image}
-  src={image}
-  alt={title}
-/> 
+      <img className={styles.image} src={image} alt={title} />
       <p className={styles.title}>{title}</p>
-<div className={styles.buttonGroup}>
-     <button onClick={() => {
-  if (isActive) {
-    onPlay(null); // stop
-  } else {
-    onPlay(); // play this one
-  }
-}}>
-  {isActive ? "Pause" : "Play"}
-</button>
-<button onClick={() => setLoop(!loop)}>
-  {loop ? "Loop On" : "Loop Off"}
-</button>
-</div>
+      <div className={styles.buttonGroup}>
+        <button
+          onClick={() => {
+            if (isActive) {
+              onPlay(null); // stop
+            } else {
+              onPlay(); // play this one
+            }
+          }}
+        >
+          {isActive ? "Pause" : "Play"}
+        </button>
+        <button onClick={() => setLoop(!loop)}>
+          {loop ? "Loop On" : "Loop Off"}
+        </button>
+      </div>
 
-      <audio
-  ref={audioRef}
-  src={audioSrc}
-  loop={loop}
-/>
+      <audio ref={audioRef} src={audioSrc} loop={loop} />
     </div>
   );
 }

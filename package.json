@@ -6,8 +6,13 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "format-prettier": "prettier --write \"**/*.{js,jsx,json}\"",
+    "format-eslint": "eslint --fix \"src/**/*.{js,jsx}\"",
+    "format": "npm run format-eslint && npm run format-prettier",
+    "lint-prettier": "prettier --check \"**/*.{js,jsx,json}\"",
+    "lint-eslint": "eslint \"src/**/*.{js,jsx}\"",
+    "lint": "npm run lint-eslint && npm run lint-prettier"
   },
   "dependencies": {
     "react": "^19.2.5",
@@ -22,6 +27,7 @@
     "eslint-plugin-react-hooks": "^7.1.1",
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.5.0",
+    "prettier": "^3.9.4",
     "vite": "^8.0.10"
   }
 }
