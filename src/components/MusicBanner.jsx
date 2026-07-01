@@ -1,5 +1,5 @@
 import styles from "./MusicBanner.module.css";
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
 export default function MusicBanner({
   title,
@@ -9,6 +9,7 @@ export default function MusicBanner({
   onPlay,
 }) {
   const audioRef = useRef(null);
+  const [loop, setLoop] = useState(false);
 
   useEffect(() => {
     const audio = audioRef.current;
@@ -29,8 +30,8 @@ export default function MusicBanner({
   src={image}
   alt={title}
 /> 
-      <p>{title}</p>
-
+      <p className={styles.title}>{title}</p>
+<div className={styles.buttonGroup}>
      <button onClick={() => {
   if (isActive) {
     onPlay(null); // stop
@@ -40,8 +41,16 @@ export default function MusicBanner({
 }}>
   {isActive ? "Pause" : "Play"}
 </button>
+<button onClick={() => setLoop(!loop)}>
+  {loop ? "Loop On" : "Loop Off"}
+</button>
+</div>
 
-      <audio ref={audioRef} src={audioSrc} loop/>
+      <audio
+  ref={audioRef}
+  src={audioSrc}
+  loop={loop}
+/>
     </div>
   );
 }
