@@ -8,17 +8,17 @@ export default function App() {
   const tracks = [
     {
       title: "slowcoach",
-      src: "/audio/slowcoach.m4a",
+      src: "./audio/slowcoach.m4a",
       image: driftImg,
     },
     {
       title: "crisp",
-      src: "/audio/crisp.m4a",
+      src: "./audio/crisploop.mp3",
       image: flyAgaricImg,
     },
     {
       title: "oink",
-      src: "/audio/oink.m4a",
+      src: "./audio/oink.m4a",
       image: webImg,
     },
   ];
